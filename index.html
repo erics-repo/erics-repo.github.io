@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" type="text/css" href="style/style.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+/* from https://www.w3schools.com/howto/howto_js_slideshow.asp */
+* {box-sizing: border-box}
+.mySlides1, .mySlides2, .mySlides3 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 700px;  
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 22px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 22px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* from the original site, used in palm springs */
+/* include the css file, instead */
+
+/* I entered, for centering images */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* I entered, for rotating images */
+/* I need to take photos in landscape so that the scroll works */
+.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+</style>
+</head>
+  <title>eScooterRadar.com</title>
+<body>
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html"><span class="logo_colour">eScooterRadar.com</span></a></h1>
+          <div id="bigger"><h5>Website of Eric M.</h5></div>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+        </ul>
+      </div>
+    </div>
+<br>
+<p style="text-align:left; padding-left: 15%; padding-right: 15%; color: #000000; font-size: 17px;">This was a fun learning experience described in my University of California application. 
+</p>
+<br>
+<p style="text-align:left; padding-left: 15%; padding-right: 15%; color: #000000; font-size: 17px;">To help build my computer skills, I created a project that contains as many hardware and software facets as possible.  I started off by focusing on having fun and learning as much as possible, but ended up with something that might be useful.  The final result is an electric scooter containing a mobile computer with GPS and “radar” and environmental sensors plus software required to make it all work together and interface with the outside world through the web and iPhone. Each component was individually wired and tested. 
+</p>
+<br>
+<br>
+<h3  style="padding-left: 15%;">System Diagram:</h3>
+
+<p  style="text-align:center;"><img src="photos\High_School_Project_Diagram.jpg" width="700px" border="1px"></p>
+    
+
+
+<h3  style="padding-left: 15%;">Scootering:</h3>
+<div class="slideshow-container">
+  <div class="mySlides1">
+    <div class="numbertext">1 / 3</div>
+    <img src="photos/e_riding_1.jpg" style="width:100%">
+    <div class="text">Riding 1</div>
+  </div>
+
+  <div class="mySlides1">
+    <div class="numbertext">2 / 3</div>
+    <img src="photos/e_riding_2.jpg" style="width:100%">
+    <div class="text">Riding 2</div>
+  </div>
+
+  <div class="mySlides1">
+    <div class="numbertext">3 / 3</div>
+    <img src="photos/e_riding_3.jpg" style="width:100%">
+    <div class="text">Riding 3</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+</div>
+<br><br><br>
+
+<h3  style="padding-left: 15%;">Assembling the System:</h3>
+<div class="slideshow-container">
+  <div class="mySlides2">
+    <div class="numbertext">1 / 3</div>
+    <img src="photos/turtle.jpg" style="width:100%">
+    <div class="text">Testing Sensors</div>
+  </div>
+
+  <div class="mySlides2">
+    <div class="numbertext">2 / 3</div>
+    <img src="photos/glass_table.jpg" style="width:100%">
+    <div class="text">Additional Parts Being Tested</div>
+  </div>
+
+  <div class="mySlides2">
+    <div class="numbertext">3 / 3</div>
+    <img src="photos/sensors_carpet.jpg" style="width:100%">
+    <div class="text">Sensors Group</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+</div>
+<br><br><br>
+
+
+<h3  style="padding-left: 15%;">Completed Project:</h3>
+<div class="slideshow-container">
+  <div class="mySlides3">
+    <div class="numbertext">1 / 6</div>
+    <img src="photos/garage.jpg" style="width:100%">
+    <div class="text">Scooter with Electronics</div>
+  </div>
+
+  <div class="mySlides3">
+    <div class="numbertext">2 / 6</div>
+    <img src="photos/overall_a.jpg" style="width:100%">
+    <div class="text">Everything</div>
+  </div>
+
+  <div class="mySlides3">
+    <div class="numbertext">3 / 6</div>
+    <img src="photos/sensors_a.jpg" style="width:100%">
+    <div class="text">Sensors</div>
+  </div>
+
+  <div class="mySlides3">
+    <div class="numbertext">4 / 6</div>
+    <img src="photos/monitor_a.jpg" style="width:100%">
+    <div class="text">Monitor</div>
+  </div>
+
+  <div class="mySlides3">
+    <div class="numbertext">5 / 6</div>
+    <img src="photos/radar_a.jpg" style="width:100%">
+    <div class="text">Radar</div>
+  </div>
+
+  <div class="mySlides3">
+    <div class="numbertext">6 / 6</div>
+    <img src="photos/rpi_arduino.jpg" style="width:100%">
+    <div class="text">Raspberry Pi Computer and Arduino Microcontroller</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+</div>
+<br><br><br>
+
+<h3  style="padding-left: 15%;">Raw GPS data.  The yellow stars show the path of a ride around town:</h3>
+<p style="text-align:center;"><img src="photos\gps driving map 2019-08-26.png" width="700px" border="1px"></p>
+
+<br><br>
+
+<h3  style="padding-left: 15%;">Ultrasonic Sensor:</h3>
+<p style="text-align:center;">    
+    <video  width="320" controls loop>
+    <source src="photos\radar_Trim1.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+    Your browser does not support the video tag.
+    </video>
+</p>
+<br><br><br>
+
+    <div id="content_footer"></div>
+    <div id="footer"></div>
+
+
+<script>
+var slideIndex = [1,1,1];
+var slideId = ["mySlides1", "mySlides2", "mySlides3"]
+showSlides(1, 0);
+showSlides(1, 1);
+showSlides(1, 2);
+
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html> 
